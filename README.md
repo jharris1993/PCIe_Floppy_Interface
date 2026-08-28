@@ -52,4 +52,4 @@ Architecture and baseline documentation are under development. Hardware, firmwar
 
 ## License
 
-A project license has not yet been selected. Do not add or assume a license until that decision is recorded.
+This project is governed by the license conditions specified in LICENSE.md.
