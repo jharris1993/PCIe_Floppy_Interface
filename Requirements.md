@@ -83,7 +83,7 @@ Any operating-system, driver-signing, enumeration, or compatibility limitations 
 The Greaseweazle project may be used as a technical reference and possible compatibility target for selected functionality. It shall not define the architecture when doing so conflicts with the project's primary programmable-FDC requirements.
 
 ### R16 — External baselines
-Any external source code or design used as an implementation baseline shall be recorded in `DEPENDENCIES.md` with enough information to identify the exact upstream version or commit.
+Any external source code or design used as an implementation baseline shall be recorded in `Dependencies.md` with enough information to identify the exact upstream version or commit.
 
 ## 6. Engineering constraints
 

@@ -20,9 +20,9 @@ Development is intentionally staged:
 
 ## Repository documentation
 
-- [`REQUIREMENTS.md`](REQUIREMENTS.md) — normative project requirements and constraints.
-- [`DESIGN.md`](DESIGN.md) — current architecture and design direction.
-- [`DEPENDENCIES.md`](DEPENDENCIES.md) — external projects, specifications, tools, and pinned baselines.
+- [`Requirements.md`](Requirements.md) — normative project requirements and constraints.
+- [`Design.md`](Design.md) — current architecture and design direction.
+- [`Dependencies.md`](Dependencies.md) — external projects, specifications, tools, and pinned baselines.
 - [`AGENTS.md`](AGENTS.md) — instructions for Codex and other repository-aware coding agents.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — repository working practices and change discipline.
 - `DECISIONS/` — concise engineering decision records for significant design choices.
@@ -31,17 +31,21 @@ Development is intentionally staged:
 
 ```text
 project-root/
-├── README.md
-├── REQUIREMENTS.md
-├── DESIGN.md
-├── DEPENDENCIES.md
+├── .gitattributes
 ├── AGENTS.md
 ├── CONTRIBUTING.md
-├── DECISIONS/
-├── hardware/
-├── firmware/
-├── software/
-└── docs/
+├── Dependencies.md
+├── Design.md
+├── Documents/
+├── Drivers/
+├── Firmware/
+├── Hardware/
+├── LICENSE.md
+├── Licenses/
+├── README.md
+├── Reference_Documentation/
+├── Requirements.md
+└── Software/
 ```
 
 The exact internal structure may evolve as implementation work begins.

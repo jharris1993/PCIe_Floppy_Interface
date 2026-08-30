@@ -10,8 +10,8 @@ This repository contains hardware, HDL/firmware, host software, drivers, and doc
 
 ## Requirements and design
 
-- `REQUIREMENTS.md` defines what the project must or should accomplish.
-- `DESIGN.md` defines the current technical approach.
+- `Requirements.md` defines what the project must or should accomplish.
+- `Design.md` defines the current technical approach.
 - Do not weaken requirements to simplify implementation. Propose requirement changes explicitly for review.
 
 ## Engineering decisions
@@ -29,7 +29,7 @@ Record the decision, context, alternatives, rationale, consequences, and relevan
 
 ## Dependencies
 
-- Record significant implementation dependencies and baselines in `DEPENDENCIES.md`.
+- Record significant implementation dependencies and baselines in `Dependencies.md`.
 - Verify license compatibility before incorporating external code.
 
 ## Hardware

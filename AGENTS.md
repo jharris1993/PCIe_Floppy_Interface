@@ -4,9 +4,9 @@
 
 Use when present and relevant:
 
-- `REQUIREMENTS.md` — requirements and constraints
-- `DESIGN.md` — architecture and open design questions
-- `DEPENDENCIES.md` — external baselines and versions
+- `Requirements.md` — requirements and constraints
+- `Design.md` — architecture and open design questions
+- `Dependencies.md` — external baselines and versions
 - `DECISIONS/` — engineering decisions
 - `CONTRIBUTING.md` — repository practices
 - `README.md` — project overview
