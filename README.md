@@ -48,6 +48,11 @@ project-root/
 └── Software/
 ```
 
+The documentation directories have distinct purposes:
+
+- [`Documents/`](Documents/) contains project-created supporting documentation.
+- [`Reference_Documentation/`](Reference_Documentation/) contains externally sourced or preserved reference material.
+
 The exact internal structure may evolve as implementation work begins.
 
 ## Project status
