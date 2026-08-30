@@ -8,12 +8,11 @@ This document defines the current baseline requirements for the floppy-drive int
 The system shall provide a programmable floppy-disk controller and digital Shugart-interface implementation suitable for a broad range of conventional floppy drives and disk formats.
 
 ### R2 — Drive compatibility
-The system shall support:
+The system shall support 3.5-inch and 5.25-inch floppy drives using two separate 34-pin signal-interface connectors.
 
-- 3.5-inch floppy drives.
-- 5.25-inch floppy drives, including older full-height units where electrically practical.
+One connector shall support IBM PC/AT-compatible drives using the conventional twisted-cable drive-selection arrangement.
 
-Support for 8-inch drives is desirable but not required for the first implementation.
+The second connector shall support other approved 34-pin interface variants, including compatible 5.25-inch drives and older full-height units where electrically practical. To the greatest extent practical, interface differences shall be selected by jumpers. Where possible, these jumpers shall provide configuration inputs to the controller or programmable logic, which shall reconfigure the applicable connector signals.
 
 ### R3 — Programmable geometry and timing
 The controller shall avoid unnecessary fixed assumptions about disk geometry or drive mechanics. Where technically practical, software or firmware shall be able to configure parameters such as:

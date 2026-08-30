@@ -1,0 +1,22 @@
+# Store and check out ordinary text files with LF endings.
+* text=auto eol=lf
+
+# Preserve conventional Windows endings where compatibility warrants it.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Never perform line-ending conversion on binary artifacts.
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+*.img binary
+*.ima binary
+*.dsk binary
