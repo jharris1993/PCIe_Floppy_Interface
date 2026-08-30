@@ -11,7 +11,7 @@ Strongly Reciprocal (CERN-OHL-S-2.0).
 
 Local copy:
 
-`LICENSES/CERN-OHL-S-2.0.txt`
+[`Licenses/cern_ohl_s_v2.txt`](Licenses/cern_ohl_s_v2.txt)
 
 Official source:
 
@@ -25,7 +25,7 @@ version 3 or later (GPL-3.0-or-later).
 
 Local copy:
 
-`LICENSES/GPL-3.0.txt`
+[`Licenses/GPL-3.0.txt`](Licenses/GPL-3.0.txt)
 
 Official source:
 
