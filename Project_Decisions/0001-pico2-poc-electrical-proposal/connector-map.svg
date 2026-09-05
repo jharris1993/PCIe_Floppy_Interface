@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1450" viewBox="0 0 1600 1450">
+<rect width="100%" height="100%" fill="white"/>
+<text x="45" y="57" fill="#235e91" font-family="Consolas,monospace" font-size="32">Pico 2 / floppy drive interface — connector plan</text>
+<text x="45" y="90" fill="#516477" font-family="Consolas,monospace" font-size="18">Two physical connectors | One active port at a time | Illustrative PC + SA455/465 signal roles</text>
+<polyline points="45,110 1555,110" fill="none" stroke="#235e91" stroke-width="2"/>
+<text x="45" y="154" fill="#235e91" font-family="Consolas,monospace" font-size="24">D. PORT SELECTION — repeat for even pin p = 2, 4, ... 34</text>
+<text x="65" y="236" fill="#182737" font-family="Consolas,monospace" font-size="20">Cell LINE_p</text>
+<polyline points="220,240 400,240" fill="none" stroke="#145c46" stroke-width="2"/>
+<circle cx="400" cy="240" r="4" fill="white" stroke="#145c46" stroke-width="2"/>
+<circle cx="470" cy="200" r="4" fill="white" stroke="#145c46" stroke-width="2"/>
+<circle cx="470" cy="280" r="4" fill="white" stroke="#145c46" stroke-width="2"/>
+<polyline points="400,240 466,202" fill="none" stroke="#145c46" stroke-width="3"/>
+<polyline points="470,200 740,200" fill="none" stroke="#145c46" stroke-width="2"/>
+<polyline points="470,280 740,280" fill="none" stroke="#145c46" stroke-width="2"/>
+<text x="755" y="202" fill="#182737" font-family="Consolas,monospace" font-size="20">J1 pin p — PC twisted cable</text>
+<text x="755" y="282" fill="#182737" font-family="Consolas,monospace" font-size="20">J2 pin p — alternate drive</text>
+<text x="380" y="170" fill="#182737" font-family="Consolas,monospace" font-size="18">JP_PORT[p]</text>
+<text x="70" y="344" fill="#182737" font-family="Consolas,monospace" font-size="18">Set all 17 shunts to the same port. Grounds remain common. Change only with power off.</text>
+<text x="65" y="400" fill="#235e91" font-family="Consolas,monospace" font-size="20">PIN</text>
+<text x="200" y="400" fill="#235e91" font-family="Consolas,monospace" font-size="20">J1: PC (controller end)</text>
+<text x="740" y="400" fill="#235e91" font-family="Consolas,monospace" font-size="20">J2: example alternate</text>
+<text x="1300" y="400" fill="#235e91" font-family="Consolas,monospace" font-size="20">CELL</text>
+<text x="65" y="444" fill="#182737" font-family="Consolas,monospace" font-size="19">2</text>
+<text x="200" y="444" fill="#182737" font-family="Consolas,monospace" font-size="19">Density / optional</text>
+<text x="740" y="444" fill="#182737" font-family="Consolas,monospace" font-size="19">Drive-specific</text>
+<text x="1300" y="444" fill="#182737" font-family="Consolas,monospace" font-size="19">FLEX</text>
+<polyline points="60,454 1530,454" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="476" fill="#182737" font-family="Consolas,monospace" font-size="19">4</text>
+<text x="200" y="476" fill="#182737" font-family="Consolas,monospace" font-size="19">Reserved: disable</text>
+<text x="740" y="476" fill="#182737" font-family="Consolas,monospace" font-size="19">Drive-specific</text>
+<text x="1300" y="476" fill="#182737" font-family="Consolas,monospace" font-size="19">FLEX</text>
+<polyline points="60,486 1530,486" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="508" fill="#182737" font-family="Consolas,monospace" font-size="19">6</text>
+<text x="200" y="508" fill="#182737" font-family="Consolas,monospace" font-size="19">Reserved: disable</text>
+<text x="740" y="508" fill="#182737" font-family="Consolas,monospace" font-size="19">DS4</text>
+<text x="1300" y="508" fill="#182737" font-family="Consolas,monospace" font-size="19">FLEX</text>
+<polyline points="60,518 1530,518" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="540" fill="#182737" font-family="Consolas,monospace" font-size="19">8</text>
+<text x="200" y="540" fill="#182737" font-family="Consolas,monospace" font-size="19">INDEX</text>
+<text x="740" y="540" fill="#182737" font-family="Consolas,monospace" font-size="19">INDEX / SECTOR</text>
+<text x="1300" y="540" fill="#182737" font-family="Consolas,monospace" font-size="19">RX</text>
+<polyline points="60,550 1530,550" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="572" fill="#182737" font-family="Consolas,monospace" font-size="19">10</text>
+<text x="200" y="572" fill="#182737" font-family="Consolas,monospace" font-size="19">MOTOR A</text>
+<text x="740" y="572" fill="#182737" font-family="Consolas,monospace" font-size="19">DS1</text>
+<text x="1300" y="572" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,582 1530,582" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="604" fill="#182737" font-family="Consolas,monospace" font-size="19">12</text>
+<text x="200" y="604" fill="#182737" font-family="Consolas,monospace" font-size="19">SELECT B</text>
+<text x="740" y="604" fill="#182737" font-family="Consolas,monospace" font-size="19">DS2</text>
+<text x="1300" y="604" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,614 1530,614" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="636" fill="#182737" font-family="Consolas,monospace" font-size="19">14</text>
+<text x="200" y="636" fill="#182737" font-family="Consolas,monospace" font-size="19">SELECT A</text>
+<text x="740" y="636" fill="#182737" font-family="Consolas,monospace" font-size="19">DS3</text>
+<text x="1300" y="636" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,646 1530,646" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="668" fill="#182737" font-family="Consolas,monospace" font-size="19">16</text>
+<text x="200" y="668" fill="#182737" font-family="Consolas,monospace" font-size="19">MOTOR B</text>
+<text x="740" y="668" fill="#182737" font-family="Consolas,monospace" font-size="19">MOTOR ON</text>
+<text x="1300" y="668" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,678 1530,678" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="700" fill="#182737" font-family="Consolas,monospace" font-size="19">18</text>
+<text x="200" y="700" fill="#182737" font-family="Consolas,monospace" font-size="19">DIRECTION</text>
+<text x="740" y="700" fill="#182737" font-family="Consolas,monospace" font-size="19">DIRECTION</text>
+<text x="1300" y="700" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,710 1530,710" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="732" fill="#182737" font-family="Consolas,monospace" font-size="19">20</text>
+<text x="200" y="732" fill="#182737" font-family="Consolas,monospace" font-size="19">STEP</text>
+<text x="740" y="732" fill="#182737" font-family="Consolas,monospace" font-size="19">STEP</text>
+<text x="1300" y="732" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,742 1530,742" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="764" fill="#182737" font-family="Consolas,monospace" font-size="19">22</text>
+<text x="200" y="764" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE DATA</text>
+<text x="740" y="764" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE DATA</text>
+<text x="1300" y="764" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,774 1530,774" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="796" fill="#182737" font-family="Consolas,monospace" font-size="19">24</text>
+<text x="200" y="796" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE GATE</text>
+<text x="740" y="796" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE GATE</text>
+<text x="1300" y="796" fill="#182737" font-family="Consolas,monospace" font-size="19">TX + ARM</text>
+<polyline points="60,806 1530,806" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="828" fill="#182737" font-family="Consolas,monospace" font-size="19">26</text>
+<text x="200" y="828" fill="#182737" font-family="Consolas,monospace" font-size="19">TRACK ZERO</text>
+<text x="740" y="828" fill="#182737" font-family="Consolas,monospace" font-size="19">TRACK ZERO</text>
+<text x="1300" y="828" fill="#182737" font-family="Consolas,monospace" font-size="19">RX</text>
+<polyline points="60,838 1530,838" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="860" fill="#182737" font-family="Consolas,monospace" font-size="19">28</text>
+<text x="200" y="860" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE PROTECT</text>
+<text x="740" y="860" fill="#182737" font-family="Consolas,monospace" font-size="19">WRITE PROTECT</text>
+<text x="1300" y="860" fill="#182737" font-family="Consolas,monospace" font-size="19">RX</text>
+<polyline points="60,870 1530,870" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="892" fill="#182737" font-family="Consolas,monospace" font-size="19">30</text>
+<text x="200" y="892" fill="#182737" font-family="Consolas,monospace" font-size="19">READ DATA</text>
+<text x="740" y="892" fill="#182737" font-family="Consolas,monospace" font-size="19">READ DATA</text>
+<text x="1300" y="892" fill="#182737" font-family="Consolas,monospace" font-size="19">RX</text>
+<polyline points="60,902 1530,902" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="924" fill="#182737" font-family="Consolas,monospace" font-size="19">32</text>
+<text x="200" y="924" fill="#182737" font-family="Consolas,monospace" font-size="19">SIDE SELECT</text>
+<text x="740" y="924" fill="#182737" font-family="Consolas,monospace" font-size="19">SIDE SELECT</text>
+<text x="1300" y="924" fill="#182737" font-family="Consolas,monospace" font-size="19">TX</text>
+<polyline points="60,934 1530,934" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="956" fill="#182737" font-family="Consolas,monospace" font-size="19">34</text>
+<text x="200" y="956" fill="#182737" font-family="Consolas,monospace" font-size="19">DISK CHANGE</text>
+<text x="740" y="956" fill="#182737" font-family="Consolas,monospace" font-size="19">READY / variant</text>
+<text x="1300" y="956" fill="#182737" font-family="Consolas,monospace" font-size="19">FLEX</text>
+<polyline points="60,966 1530,966" fill="none" stroke="#dee5eb" stroke-width="1"/>
+<text x="65" y="1000" fill="#182737" font-family="Consolas,monospace" font-size="18">All conventional odd contacts: GND. Approve each actual drive pinout before connection.</text>
+<text x="65" y="1030" fill="#182737" font-family="Consolas,monospace" font-size="18">9 TX + 4 RX + 4 FLEX = 17 GPIOs. Full fit: 13 MOSFETs + 2 hex receiver ICs.</text>
+<polyline points="45,1055 1555,1055" fill="none" stroke="#516477" stroke-width="2"/>
+<text x="45" y="1096" fill="#235e91" font-family="Consolas,monospace" font-size="24">E. POWER / DEFAULTS</text>
+<text x="65" y="1139" fill="#182737" font-family="Consolas,monospace" font-size="19">USB -&gt; Pico 2          Pico 3V3(OUT) -&gt; receiver VCC (pin 14); GND -&gt; pin 7</text>
+<text x="65" y="1173" fill="#182737" font-family="Consolas,monospace" font-size="19">Drive regulated 5 V -&gt; +5V_IF pull-ups; drive motor power uses its own connector.</text>
+<text x="65" y="1207" fill="#182737" font-family="Consolas,monospace" font-size="19">Do not connect external +5V_IF to Pico VBUS or 3V3. Connect all signal grounds.</text>
+<text x="65" y="1241" fill="#182737" font-family="Consolas,monospace" font-size="19">Per IC: 100 nF bypass. Per local rail: 4.7 uF bulk. Ground unused receiver inputs.</text>
+<text x="65" y="1275" fill="#182737" font-family="Consolas,monospace" font-size="19">TX GPIOs start LOW. WRITE ARM starts OPEN. FLEX jumpers must match firmware.</text>
+<text x="65" y="1309" fill="#182737" font-family="Consolas,monospace" font-size="19">TX pull-ups: normally at drive. RX pull-ups: removable 1k starting value; see notes.</text>
+<text x="65" y="1352" fill="#516477" font-family="Consolas,monospace" font-size="18">Unverified: final GPIO map, approved drives, cable loading, pulse widths, power sequencing.</text>
+<text x="45" y="1424" fill="#516477" font-family="Consolas,monospace" font-size="18">TENTATIVE | 2026-09-01 | GPIO numbers TBD | See README for limits and sources</text>
+</svg>
