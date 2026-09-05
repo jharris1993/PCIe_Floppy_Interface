@@ -10,13 +10,13 @@ This repository contains hardware, HDL/firmware, host software, drivers, and doc
 
 ## Requirements and design
 
-- `Requirements.md` defines what the project must or should accomplish.
-- `Design.md` defines the current technical approach.
+- `Requirements.md` is the authoritative current project requirements specification.
+- `Design.md` describes the current design used to implement the requirements but is not authoritative.
 - Do not weaken requirements to simplify implementation. Propose requirement changes explicitly for review.
 
 ## Engineering decisions
 
-Create a concise record in `DECISIONS/` for significant choices whose rationale may matter later, including major changes to:
+Use `Project_Decisions/` as a non-authoritative engineering notebook for significant choices whose rationale may matter later, including major changes to:
 
 - FPGA or PCIe architecture;
 - host driver model;
@@ -26,6 +26,8 @@ Create a concise record in `DECISIONS/` for significant choices whose rationale 
 - external baselines.
 
 Record the decision, context, alternatives, rationale, consequences, and relevant commit or issue references.
+
+When a project choice changes a requirement or the current design, update `Requirements.md` or `Design.md`, as applicable. A notebook entry does not override `Requirements.md`.
 
 ## Dependencies
 

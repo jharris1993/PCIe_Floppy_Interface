@@ -4,12 +4,16 @@
 
 Use when present and relevant:
 
-- `Requirements.md` — requirements and constraints
-- `Design.md` — architecture and open design questions
+- `Requirements.md` — authoritative project requirements
+- `Design.md` — current, non-authoritative design and open design questions
 - `Dependencies.md` — external baselines and versions
-- `DECISIONS/` — engineering decisions
+- `Project_Decisions/` — non-authoritative engineering notebook
 - `CONTRIBUTING.md` — repository practices
 - `README.md` — project overview
+
+When researching technical questions, consult the applicable `Reference_*` directories.
+
+Reference material is not authoritative project specification merely because it is present in the repository.
 
 ## Working rules
 
@@ -21,7 +25,8 @@ Use when present and relevant:
 - Keep host-command semantics independent of temporary development transports where practical.
 - Verify external versions, electrical limits, hardware capabilities, PCIe requirements, and driver behavior; otherwise mark them unresolved.
 - Keep documentation synchronized with implementation.
-- Record significant architectural choices or reversals in `DECISIONS/`.
+- Record significant architectural choices or reversals in `Project_Decisions/`.
+- When a project choice changes the current requirements or design, update `Requirements.md` or `Design.md`, as applicable.
 - Avoid unrelated changes.
 
 ## Verification

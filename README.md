@@ -20,12 +20,16 @@ Development is intentionally staged:
 
 ## Repository documentation
 
-- [`Requirements.md`](Requirements.md) — normative project requirements and constraints.
-- [`Design.md`](Design.md) — current architecture and design direction.
+- [`Requirements.md`](Requirements.md) — authoritative current project requirements.
+- [`Design.md`](Design.md) — current, non-authoritative project design.
 - [`Dependencies.md`](Dependencies.md) — external projects, specifications, tools, and pinned baselines.
 - [`AGENTS.md`](AGENTS.md) — instructions for Codex and other repository-aware coding agents.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — repository working practices and change discipline.
-- `DECISIONS/` — concise engineering decision records for significant design choices.
+- [`Project_Decisions/`](Project_Decisions/) — non-authoritative engineering notebook of significant project choices and rationale.
+- [`Documents/`](Documents/) — project-created supporting documentation.
+- [`Reference_Documentation/`](Reference_Documentation/) — external technical documents and research.
+- [`Reference_Illustrations/`](Reference_Illustrations/) — external explanatory illustrations.
+- [`Reference_Implementations/`](Reference_Implementations/) — existing implementations examined during design.
 
 ## Repository structure
 
@@ -42,18 +46,24 @@ project-root/
 ├── Hardware/
 ├── LICENSE.md
 ├── Licenses/
+├── Project_Decisions/
 ├── README.md
 ├── Reference_Documentation/
+│   ├── Documents/
+│   ├── Pinouts/
+│   ├── Research/
+│   ├── Schematics/
+│   ├── Specifications/
+│   ├── README.md
+│   └── Sources.md
+├── Reference_Illustrations/
+├── Reference_Implementations/
+│   └── Greaseweazle/
 ├── Requirements.md
 └── Software/
 ```
 
-The documentation directories have distinct purposes:
-
-- [`Documents/`](Documents/) contains project-created supporting documentation.
-- [`Reference_Documentation/`](Reference_Documentation/) contains externally sourced or preserved reference material.
-
-The exact internal structure may evolve as implementation work begins.
+Detailed organization should be defined close to the material it describes.
 
 ## Project status
 
@@ -61,4 +71,4 @@ Architecture and baseline documentation are under development. Hardware, firmwar
 
 ## License
 
-This project is governed by the license conditions specified in LICENSE.md.
+This project is governed by the license conditions specified in [`LICENSE.md`](LICENSE.md).

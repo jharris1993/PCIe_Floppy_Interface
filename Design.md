@@ -1,6 +1,6 @@
 # Design
 
-This document describes the current architectural direction. It is not a substitute for `Requirements.md`; implementation choices may change as long as the requirements remain satisfied or are deliberately revised.
+This document describes the current design used to implement `Requirements.md`. It is not authoritative and does not override the project requirements. Implementation choices may change as long as the requirements remain satisfied or are deliberately revised.
 
 ## 1. Architectural concept
 

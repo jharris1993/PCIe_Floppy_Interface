@@ -1,6 +1,6 @@
 # Requirements
 
-This document defines the current baseline requirements for the floppy-drive interface project. Requirements are normative unless explicitly marked optional or future.
+This document is the authoritative current requirements specification for the floppy-drive interface project. Requirements are normative unless explicitly marked optional or future.
 
 ## 1. Functional scope
 
@@ -99,7 +99,7 @@ Unverified assumptions about PCIe, Windows driver behavior, legacy floppy suppor
 ## 7. Documentation and change control
 
 ### R20 — Significant decisions
-Significant architectural or compatibility decisions shall be recorded in `DECISIONS/` when the rationale would otherwise be difficult to reconstruct later.
+Significant architectural or compatibility decisions shall be recorded in `Project_Decisions/` when the rationale would otherwise be difficult to reconstruct later.
 
 ### R21 — Source of truth
-When repository documents disagree, the more specific normative requirement or a later approved decision record shall take precedence. Conflicts shall be corrected rather than silently resolved in implementation code.
+When repository documents disagree, `Requirements.md` governs project requirements and supersedes conflicting repository documentation.

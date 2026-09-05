@@ -1,7 +1,13 @@
 # Reference Documentation
 
-This directory contains externally sourced or preserved material used for technical research and engineering reference.
+This directory contains external technical documents and project-created research used for engineering reference.
 
-Inclusion here does not make a source authoritative for this project. A source may be authoritative within its stated external scope, such as a particular product, revision, or specification, but it does not override the project's requirements or adopted design decisions.
+Material here does not define project requirements or the current project design. Evaluate each source for its origin, revision, applicability, and accuracy.
 
-Source filenames should be preserved where practical.
+- `Documents/` contains retained reference documents.
+- `Pinouts/` contains connector and interface pinouts.
+- `Research/` contains project-created research.
+- `Schematics/` contains externally sourced electrical schematics.
+- `Specifications/` contains retained technical specifications.
+
+See `Sources.md` for source information.

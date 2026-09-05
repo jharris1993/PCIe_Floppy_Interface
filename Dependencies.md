@@ -40,4 +40,4 @@ For every implementation dependency, record:
 5. local modifications or patches, if any;
 6. update procedure or compatibility constraint when relevant.
 
-Do not silently update an implementation baseline. A change that can affect compatibility or behavior should be documented and, when significant, recorded in `DECISIONS/`.
+Do not silently update an implementation baseline. A change that can affect compatibility or behavior should be documented and, when significant, recorded in `Project_Decisions/`.
