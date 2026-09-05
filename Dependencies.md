@@ -6,9 +6,7 @@ Do not record an external project merely because it was consulted during discuss
 
 ## Source-code baselines
 
-| Project | Purpose | Upstream | Version / commit | License | Notes |
-|---|---|---|---|---|---|
-| Greaseweazle | Reference implementation and possible compatibility reference | `https://github.com/keirf/greaseweazle` | **TBD — pin before implementation use** | Verify at pinned revision | Do not assume full architectural compatibility. |
+No source-code baselines have been selected.
 
 ## Hardware / protocol specifications
 
