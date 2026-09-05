@@ -29,7 +29,7 @@ Development is intentionally staged:
 - [`Documents/`](Documents/) — project-created supporting documentation.
 - [`Reference_Documentation/`](Reference_Documentation/) — external technical documents and research.
 - [`Reference_Illustrations/`](Reference_Illustrations/) — external explanatory illustrations.
-- [`Reference_Implementations/`](Reference_Implementations/) — existing implementations examined during design.
+- [`Reference_Implementations/`](Reference_Implementations/) — external implementations available for design reference.
 
 ## Repository structure
 
