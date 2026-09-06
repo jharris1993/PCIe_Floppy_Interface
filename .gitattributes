@@ -23,3 +23,5 @@
 
 # Preserve externally sourced reference snapshots byte-for-byte.
 Reference_Implementations/Greaseweazle/Snapshot/** -text
+Reference_Implementations/Greaseweazle/Wiki_Snapshot/** -text
+Reference_Implementations/Greaseweazle/Wiki_Artifacts/** -text
