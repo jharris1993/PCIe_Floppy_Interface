@@ -20,3 +20,6 @@
 *.img binary
 *.ima binary
 *.dsk binary
+
+# Preserve externally sourced reference snapshots byte-for-byte.
+Reference_Implementations/Greaseweazle/Snapshot/** -text
