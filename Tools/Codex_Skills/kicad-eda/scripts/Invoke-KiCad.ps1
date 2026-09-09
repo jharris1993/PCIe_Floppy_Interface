@@ -14,6 +14,11 @@ param(
 
 $ErrorActionPreference = 'Stop'
 
+$currentIdentity = [Security.Principal.WindowsIdentity]::GetCurrent().Name
+if ($currentIdentity -match '(?i)\\CodexSandboxOffline$') {
+    throw "Refusing to invoke kicad-cli as '$currentIdentity'. Run this wrapper outside the Codex sandbox under the normal Windows user through a narrowly scoped approval; Administrator elevation is not required."
+}
+
 function Find-KiCadCli {
     if ($env:KICAD_CLI -and (Test-Path -LiteralPath $env:KICAD_CLI)) {
         return (Resolve-Path -LiteralPath $env:KICAD_CLI).Path

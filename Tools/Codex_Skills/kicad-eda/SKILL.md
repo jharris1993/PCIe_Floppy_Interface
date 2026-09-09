@@ -29,8 +29,9 @@ Choose the least fragile method that supplies the needed capability:
 
 1. Prefer headless, file-based work: native KiCad sources, KiCad's bundled `pcbnew` Python for PCB construction, and `kicad-cli` for checks and exports.
 2. Use the official `kicad-python` IPC binding only for operations its capability probe confirms against a running KiCad session. KiCad 10 IPC does not provide general schematic authoring.
-3. Invoke [scripts/Invoke-KiCad.ps1](scripts/Invoke-KiCad.ps1) for deterministic checks and exports. Use [scripts/Build-KiCadPcb.py](scripts/Build-KiCadPcb.py) for declarative PCB construction and [scripts/Build-KiCadSchematic.py](scripts/Build-KiCadSchematic.py) for native schematic scaffolding or checked transformations.
-4. Edit native KiCad S-expressions only when the format and operation are understood. Preserve or regenerate UUIDs deliberately, keep embedded library data consistent, make narrow edits, and validate connectivity plus rendered output.
+3. Invoke [scripts/Invoke-KiCad.ps1](scripts/Invoke-KiCad.ps1) for deterministic checks and exports. On this Windows host, every process that invokes `kicad-cli` must run outside the Codex sandbox under the normal user through a narrowly scoped approval. The wrapper and regression runner enforce this by refusing the `CodexSandboxOffline` identity. This is sandbox escape approval, not Administrator elevation.
+4. Use [scripts/Build-KiCadPcb.py](scripts/Build-KiCadPcb.py) for declarative PCB construction and [scripts/Build-KiCadSchematic.py](scripts/Build-KiCadSchematic.py) for native schematic scaffolding or checked transformations. If schematic scaffolding uses `--kicad-cli`, run that process outside the sandbox too.
+5. Edit native KiCad S-expressions only when the format and operation are understood. Preserve or regenerate UUIDs deliberately, keep embedded library data consistent, make narrow edits, and validate connectivity plus rendered output.
 
 Do not capture or control the user's desktop, launch KiCad's GUI, or use GUI keystroke/mouse automation unless the user explicitly authorizes that method for the current task. A headless limitation is a capability boundary to report, not implicit permission to take over the desktop.
 

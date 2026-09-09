@@ -4,6 +4,10 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$currentIdentity = [Security.Principal.WindowsIdentity]::GetCurrent().Name
+if ($currentIdentity -match '(?i)\\CodexSandboxOffline$') {
+    throw "Refusing to run KiCad CLI regression tests as '$currentIdentity'. Run this script outside the Codex sandbox under the normal Windows user through a narrowly scoped approval."
+}
 $skillRoot = Split-Path -Parent $PSScriptRoot
 $scripts = Join-Path $skillRoot 'scripts'
 $fixtures = Join-Path $PSScriptRoot 'fixtures'

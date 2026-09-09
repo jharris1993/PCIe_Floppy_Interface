@@ -13,6 +13,7 @@ The initial KiCad automation workflow used GUI conversion and, when automation f
 - Native `.kicad_sch` sources are maintained directly. The scaffold tool only clones a known-good native schematic, regenerates UUIDs, updates instance project names, and changes existing title-block fields; it does not claim arbitrary symbol placement.
 - Declarative PCB construction uses the `pcbnew` module bundled with the selected KiCad installation. Placement, pad-to-net assignments, and routes remain explicit inputs; the tool does not autoroute.
 - `kicad-cli` is the verification and export authority for ERC, DRC, netlist/BOM, schematic renders, PCB renders, and fabrication outputs.
+- On the Windows Codex host, all `kicad-cli` callers run outside the sandbox under the normal user through narrowly scoped approval. Maintained wrappers refuse the `CodexSandboxOffline` identity before invoking KiCad; Administrator elevation is not required.
 - The KiCad 10 IPC client is pinned to `kicad-python` 0.7.1. IPC diagnostics distinguish transport connectivity from handler capability.
 - Maintained source, dependency pins, tests, and fixtures are committed under `Tools/Codex_Skills/kicad-eda`. Personal skill copies, virtual environments, registry data, IPC sockets, and temporary renders are not committed.
 
