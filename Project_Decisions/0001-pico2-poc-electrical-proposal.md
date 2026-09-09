@@ -10,7 +10,7 @@ The user requested an inexpensive proof of concept supplementing the original re
 
 ## Proposal
 
-Use open-drain MOSFET transmitters, 3.3 V Schmitt-trigger receivers with 5 V-tolerant inputs, and hardware direction selection for variant connector signals. Preserve two connector options with one selected at a time. Detailed circuits and assumptions are in [Hardware/Pico2_POC/README.md](../Hardware/Pico2_POC/README.md).
+Use open-drain MOSFET transmitters, 3.3 V Schmitt-trigger receivers with 5 V-tolerant inputs, and hardware direction selection for variant connector signals. Preserve two connector options with one selected at a time. Detailed circuits and assumptions are in [the proposal README](0001-pico2-poc-electrical-proposal/README.md).
 
 ## Rationale and alternatives
 

@@ -1,58 +1,38 @@
 # Contributing
 
-This repository contains hardware, HDL/firmware, host software, drivers, and documentation. Keep changes focused, traceable, and documented.
-
-## General practice
-
-- Keep commits focused and use descriptive messages.
-- Do not mix unrelated cleanup with functional changes.
-- Update documentation when requirements, architecture, interfaces, dependencies, build procedures, or externally visible behavior change.
+Keep changes focused, traceable, and limited to one purpose per commit.
 
 ## Requirements and design
 
-- `Requirements.md` is the authoritative current project requirements specification.
-- `Design.md` describes the current design used to implement the requirements but is not authoritative.
-- Do not weaken requirements to simplify implementation. Propose requirement changes explicitly for review.
-
-## Engineering decisions
-
-Use `Project_Decisions/` as a non-authoritative engineering notebook for significant choices whose rationale may matter later, including major changes to:
-
-- FPGA or PCIe architecture;
-- host driver model;
-- electrical interfaces;
-- command protocols;
-- compatibility targets;
-- external baselines.
-
-Record the decision, context, alternatives, rationale, consequences, and relevant commit or issue references.
-
-When a project choice changes a requirement or the current design, update `Requirements.md` or `Design.md`, as applicable. A notebook entry does not override `Requirements.md`.
+- `Requirements.md` is authoritative.
+- `Design.md` records the current implementation approach.
+- Record significant choices and rationale in `Project_Decisions/`.
+- Update affected documentation when requirements, design, interfaces, dependencies, or procedures change.
+- Do not silently change requirements or established decisions.
 
 ## Dependencies
 
-- Record significant implementation dependencies and baselines in `Dependencies.md`.
-- Verify license compatibility before incorporating external code.
+Record significant tools, libraries, external baselines, versions, sources, and licenses in `Dependencies.md`.
 
 ## Hardware
 
-Maintain applicable schematic and PCB sources, BOM/part information, substitutions, electrical assumptions, pinouts, and release fabrication outputs.
+- Use the KiCad version recorded in `Dependencies.md` for maintained schematic and PCB designs.
+- Commit native editable sources and all project-specific symbols, footprints, rules, and configuration needed to reproduce the design.
+- Run applicable ERC and DRC checks and review all warnings, exclusions, and unconnected items.
+- Regenerate and inspect affected fabrication outputs before release.
+- Report unverified electrical, mechanical, manufacturing, or hardware assumptions.
 
-Do not compromise documented signal-integrity, timing, voltage, or safety constraints for prototype convenience.
+Detailed KiCad procedures and automation belong under `Tools/`.
 
-## Firmware and HDL
+## Firmware and software
 
-- Provide repeatable verification for timing-sensitive logic where practical.
-- Document non-obvious timing assumptions and clock-domain crossings.
+- Provide repeatable tests for affected behavior where practical.
+- Document timing, platform, installation, privilege, signing, and compatibility constraints as applicable.
+- Keep host-command semantics independent of temporary development transports where practical.
 
-## Software and drivers
+## Before completion
 
-Document applicable OS support and significant installation, privilege, signing, or kernel requirements.
-
-## Completion
-
-Before considering a change complete:
-
-- verify affected functionality;
-- update relevant documentation;
-- identify remaining unverified assumptions or hardware-dependent behavior.
+1. Run applicable tests, checks, formatters, simulations, ERC, or DRC.
+2. Review the complete diff for unrelated or generated changes.
+3. Update affected documentation and dependency records.
+4. State what was verified and what remains unverified.

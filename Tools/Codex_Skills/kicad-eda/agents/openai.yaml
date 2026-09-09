@@ -1,0 +1,4 @@
+interface:
+  display_name: "KiCad EDA"
+  short_description: "Design, verify, and release KiCad schematics and PCBs"
+  default_prompt: "Use the KiCad EDA workflow to create or modify this design and verify the result."

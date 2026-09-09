@@ -30,6 +30,7 @@ Development is intentionally staged:
 - [`Reference_Documentation/`](Reference_Documentation/) — external technical documents and research.
 - [`Reference_Illustrations/`](Reference_Illustrations/) — external explanatory illustrations.
 - [`Reference_Implementations/`](Reference_Implementations/) — external implementations available for design reference.
+- [`Tools/`](Tools/) — project development, verification, and automation tooling.
 
 ## Repository structure
 
@@ -60,7 +61,8 @@ project-root/
 ├── Reference_Implementations/
 │   └── Greaseweazle/
 ├── Requirements.md
-└── Software/
+├── Software/
+└── Tools/
 ```
 
 Detailed organization should be defined close to the material it describes.
