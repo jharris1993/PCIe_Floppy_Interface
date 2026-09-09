@@ -1,0 +1,4 @@
+interface:
+  display_name: "Contextual Action Authorization"
+  short_description: "Resolve questions, instructions, and ambiguous requests safely"
+  default_prompt: "Interpret the user's message in context; treat genuine ambiguity as a question and require an imperative statement for destructive action."
