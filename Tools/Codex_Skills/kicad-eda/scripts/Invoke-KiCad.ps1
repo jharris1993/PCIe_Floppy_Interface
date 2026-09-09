@@ -1,7 +1,7 @@
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $true, Position = 0)]
-    [ValidateSet('doctor', 'erc', 'drc', 'bom', 'schematic-pdf', 'gerbers', 'drill', 'positions', 'step', 'release')]
+    [ValidateSet('doctor', 'erc', 'drc', 'bom', 'schematic-pdf', 'schematic-svg', 'pcb-render', 'gerbers', 'drill', 'positions', 'step', 'verify', 'release')]
     [string]$Action,
 
     [Parameter(Position = 1)]
@@ -51,12 +51,17 @@ $major = [int]($versionText.Split('.')[0])
 if ($major -lt 10) { throw "KiCad 10 or newer is required; found $versionText." }
 
 if ($Action -eq 'doctor') {
+    $bundledPython = Join-Path (Split-Path -Parent $script:KiCadCli) 'python.exe'
     [pscustomobject]@{
         KiCadCli = $script:KiCadCli
         Version = $versionText
         Symbols = Test-Path -LiteralPath "C:\Program Files\KiCad\${major}.0\share\kicad\symbols"
         Footprints = Test-Path -LiteralPath "C:\Program Files\KiCad\${major}.0\share\kicad\footprints"
         Models3D = Test-Path -LiteralPath "C:\Program Files\KiCad\${major}.0\share\kicad\3dmodels"
+        BundledPython = if (Test-Path -LiteralPath $bundledPython) { $bundledPython } else { $null }
+        HeadlessSchematicAuthoring = $false
+        HeadlessPcbAuthoring = Test-Path -LiteralPath $bundledPython
+        DesktopAutomationAllowedByDefault = $false
         ApiEnabled = if ($major -eq 10) {
             $cfg = Join-Path $env:APPDATA 'kicad\10.0\kicad_common.json'
             if (Test-Path -LiteralPath $cfg) {
@@ -91,6 +96,17 @@ switch ($Action) {
         $sch = Resolve-Input $InputFile '.kicad_sch'
         Invoke-Cli @('sch', 'export', 'pdf', '--black-and-white', '--output', (Join-Path $out 'schematic.pdf'), $sch)
     }
+    'schematic-svg' {
+        $sch = Resolve-Input $InputFile '.kicad_sch'
+        $svgOut = Join-Path $out 'schematic-svg'
+        New-Item -ItemType Directory -Force -Path $svgOut | Out-Null
+        Invoke-Cli @('sch', 'export', 'svg', '--black-and-white', '--output', $svgOut, $sch)
+    }
+    'pcb-render' {
+        $pcb = Resolve-Input $InputFile '.kicad_pcb'
+        Invoke-Cli @('pcb', 'render', '--width', '1600', '--height', '1200', '--quality', 'high', '--side', 'top', '--output', (Join-Path $out 'pcb-top.png'), $pcb)
+        Invoke-Cli @('pcb', 'render', '--width', '1600', '--height', '1200', '--quality', 'high', '--side', 'bottom', '--output', (Join-Path $out 'pcb-bottom.png'), $pcb)
+    }
     'gerbers' {
         $pcb = Resolve-Input $InputFile '.kicad_pcb'
         $gerberOut = Join-Path $out 'gerbers'
@@ -111,11 +127,20 @@ switch ($Action) {
         $pcb = Resolve-Input $InputFile '.kicad_pcb'
         Invoke-Cli @('pcb', 'export', 'step', '--force', '--no-dnp', '--subst-models', '--output', (Join-Path $out 'board.step'), $pcb)
     }
+    'verify' {
+        $sch = Resolve-Input $SchematicFile '.kicad_sch'
+        $pcb = Resolve-Input $BoardFile '.kicad_pcb'
+        $scriptPath = $MyInvocation.MyCommand.Path
+        foreach ($item in @(@('erc', $sch), @('drc', $pcb), @('schematic-pdf', $sch), @('schematic-svg', $sch), @('pcb-render', $pcb))) {
+            & $scriptPath $item[0] $item[1] -OutputDirectory $out
+            if ($LASTEXITCODE -ne 0) { throw "Verification stopped during $($item[0])." }
+        }
+    }
     'release' {
         $sch = Resolve-Input $SchematicFile '.kicad_sch'
         $pcb = Resolve-Input $BoardFile '.kicad_pcb'
         $scriptPath = $MyInvocation.MyCommand.Path
-        foreach ($item in @(@('erc', $sch), @('drc', $pcb), @('bom', $sch), @('schematic-pdf', $sch), @('gerbers', $pcb), @('drill', $pcb), @('positions', $pcb), @('step', $pcb))) {
+        foreach ($item in @(@('erc', $sch), @('drc', $pcb), @('bom', $sch), @('schematic-pdf', $sch), @('schematic-svg', $sch), @('pcb-render', $pcb), @('gerbers', $pcb), @('drill', $pcb), @('positions', $pcb), @('step', $pcb))) {
             & $scriptPath $item[0] $item[1] -OutputDirectory $out
             if ($LASTEXITCODE -ne 0) { throw "Release stopped during $($item[0])." }
         }

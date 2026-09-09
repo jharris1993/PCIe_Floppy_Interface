@@ -27,10 +27,12 @@ Produce electrically justified, mechanically consistent, reviewable KiCad artifa
 
 Choose the least fragile method that supplies the needed capability:
 
-1. Use KiCad itself for interactive schematic and PCB operations when GUI control is available.
-2. Use the official `kicad-python` IPC binding for supported operations against a running KiCad 10 session. Save through KiCad and re-run checks afterward.
-3. Use `kicad-cli` for deterministic checks and exports. Invoke [scripts/Invoke-KiCad.ps1](scripts/Invoke-KiCad.ps1) rather than reconstructing release commands each time.
-4. Edit KiCad S-expressions directly only when the operation is not supported above and the format is understood. Preserve UUIDs and embedded library data, make a narrow edit, reopen/resave in KiCad, and validate connectivity plus visual output.
+1. Prefer headless, file-based work: native KiCad sources, KiCad's bundled `pcbnew` Python for PCB construction, and `kicad-cli` for checks and exports.
+2. Use the official `kicad-python` IPC binding only for operations its capability probe confirms against a running KiCad session. KiCad 10 IPC does not provide general schematic authoring.
+3. Invoke [scripts/Invoke-KiCad.ps1](scripts/Invoke-KiCad.ps1) for deterministic checks and exports. Use [scripts/Build-KiCadPcb.py](scripts/Build-KiCadPcb.py) for declarative PCB construction and [scripts/Build-KiCadSchematic.py](scripts/Build-KiCadSchematic.py) for native schematic scaffolding or checked transformations.
+4. Edit native KiCad S-expressions only when the format and operation are understood. Preserve or regenerate UUIDs deliberately, keep embedded library data consistent, make narrow edits, and validate connectivity plus rendered output.
+
+Do not capture or control the user's desktop, launch KiCad's GUI, or use GUI keystroke/mouse automation unless the user explicitly authorizes that method for the current task. A headless limitation is a capability boundary to report, not implicit permission to take over the desktop.
 
 Never claim that a syntactically valid file is an electrically correct design. Never infer pin numbers, footprints, voltage limits, polarity, stackup, impedance, or manufacturer ordering data from a similar-looking part.
 

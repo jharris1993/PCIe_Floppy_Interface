@@ -23,3 +23,5 @@ Do not begin detailed placement or routing until the board outline, mounting hol
 ## Verification
 
 Update the PCB from the schematic and check parity. Refill zones before final DRC. Inspect copper and mask per layer, silkscreen readability, courtyard/assembly clearance, holes and slots, board outline closure, and 3D/mechanical fit. DRC exclusions require a specific documented rationale.
+
+For reproducible headless construction, `Build-KiCadPcb.py` accepts a declarative JSON specification for the outline, standard-library footprints, pad-to-net assignments, and explicit routed segments. It deliberately does not autoroute or infer electrical connectivity. Run it with KiCad's bundled Python so the `pcbnew` module matches the saved board format.

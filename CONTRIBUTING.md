@@ -24,6 +24,8 @@ Record significant tools, libraries, external baselines, versions, sources, and 
 
 Detailed KiCad procedures and automation belong under `Tools/`.
 
+KiCad automation should be headless by default. Desktop capture or GUI control requires explicit user authorization for the task and must not be used merely because CLI or IPC capability is absent.
+
 ## Firmware and software
 
 - Provide repeatable tests for affected behavior where practical.

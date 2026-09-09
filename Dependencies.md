@@ -24,7 +24,7 @@ Tool versions should be pinned when reproducibility depends on them.
 | Tool | Purpose | Required version | Notes |
 |---|---|---|---|
 | KiCad | Schematic capture, PCB layout, libraries, verification, and fabrication output | 10.0.6 | Standard Windows x64 installation with official libraries and API server enabled. The packaged libraries are the selected baseline; do not replace them with moving GitLab `master` branches. |
-| kicad-python | Official KiCad IPC Python binding | 0.8.0 | Installed in an isolated Codex tool environment; exact transitive versions are recorded by the installer. Requires a running KiCad 10 instance for IPC. |
+| kicad-python | Official KiCad IPC Python binding | 0.7.1 | Last binding release aligned with KiCad 10. Installed in an isolated Codex tool environment; exact transitive versions are recorded by the installer. Requires a running KiCad 10 instance and is limited mainly to PCB operations. |
 | FPGA vendor toolchain | HDL synthesis/place-and-route/programming | TBD | Define after FPGA selection. |
 | HDL simulator | Simulation and automated verification | TBD | Define after HDL/toolchain selection. |
 | Host compiler/toolchain | Host utilities and driver support | TBD | Record separately per supported OS if needed. |

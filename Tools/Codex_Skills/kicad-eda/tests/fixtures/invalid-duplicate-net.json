@@ -1,0 +1,6 @@
+{
+  "nets": ["DUPLICATE", "DUPLICATE"],
+  "footprints": [],
+  "tracks": [],
+  "outline_mm": [[0, 0], [10, 0], [10, 10], [0, 10]]
+}

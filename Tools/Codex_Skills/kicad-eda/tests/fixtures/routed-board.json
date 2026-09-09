@@ -1,0 +1,29 @@
+{
+  "rules_mm": {
+    "min_clearance": 0.2,
+    "min_track_width": 0.2,
+    "min_via_diameter": 0.6,
+    "min_via_drill": 0.3
+  },
+  "nets": ["SIGNAL"],
+  "footprints": [
+    {
+      "reference": "J1",
+      "value": "INPUT",
+      "library_id": "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical",
+      "at_mm": [5, 5],
+      "pads": {"1": "SIGNAL"}
+    },
+    {
+      "reference": "J2",
+      "value": "OUTPUT",
+      "library_id": "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Vertical",
+      "at_mm": [15, 5],
+      "pads": {"1": "SIGNAL"}
+    }
+  ],
+  "tracks": [
+    {"net": "SIGNAL", "layer": "F.Cu", "width_mm": 0.25, "points_mm": [[5, 5], [15, 5]]}
+  ],
+  "outline_mm": [[0, 0], [20, 0], [20, 10], [0, 10]]
+}

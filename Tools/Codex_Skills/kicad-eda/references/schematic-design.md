@@ -19,3 +19,7 @@ Verify symbol pin numbers and electrical types against the exact package/datashe
 ## Verification
 
 Run annotation and ERC. Resolve warnings by correcting the circuit; use exclusions or no-connect markers only when their intent is documented. Export a netlist/BOM and check that references, values, footprints, and part numbers agree with the schematic. Render all changed sheets and inspect junctions, labels, overlapping text, bus entries, power symbols, and page boundaries.
+
+## KiCad 10 headless boundary
+
+KiCad 10 has no supported headless schematic-authoring API. Create or transform native `.kicad_sch` files only from a known native source whose embedded symbols and instance data are preserved. `Build-KiCadSchematic.py` can create a project-specific native scaffold from such a template, regenerate UUIDs, update the root instance path, and set title-block metadata. It does not add arbitrary symbols or infer pin geometry. Circuit-specific composition must be followed by CLI ERC, netlist/BOM export, PDF rendering, and visual inspection.
